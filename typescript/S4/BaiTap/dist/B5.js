@@ -104,7 +104,7 @@ class StudyManager {
 }
 class Main5 {
     constructor() {
-        this.manager = new StudyManager();
+        this._manager = new StudyManager();
     }
     start() {
         let running = true;
@@ -119,22 +119,22 @@ class Main5 {
                 case "1":
                     const studentName = prompt("Nhập tên sinh viên:");
                     if (studentName)
-                        this.manager.addStudent(studentName);
+                        this._manager.addStudent(studentName);
                     break;
                 case "2":
                     const courseTitle = prompt("Nhập tên khóa học:");
                     if (courseTitle)
-                        this.manager.addCourse(courseTitle);
+                        this._manager.addCourse(courseTitle);
                     break;
                 case "3":
                     const studentId = parseInt(prompt("Nhập ID sinh viên:") || "0", 10);
                     const courseId = parseInt(prompt("Nhập ID khóa học:") || "0", 10);
                     const scheduleTime = prompt("Nhập thời gian học (ví dụ: 08:00 AM - 10:00 AM):");
                     if (scheduleTime)
-                        this.manager.enrollStudent(studentId, courseId, scheduleTime);
+                        this._manager.enrollStudent(studentId, courseId, scheduleTime);
                     break;
                 case "4":
-                    this.manager.listEnrollments();
+                    this._manager.listEnrollments();
                     break;
                 case "5":
                     running = false;

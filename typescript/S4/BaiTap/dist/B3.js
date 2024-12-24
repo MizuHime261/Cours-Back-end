@@ -1,38 +1,49 @@
 "use strict";
-// Ứng dụng quản lý thư viện sách
 class Book {
     constructor(id, title, author, year) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.year = year;
+        this._id = id;
+        this._title = title;
+        this._author = author;
+        this._year = year;
+    }
+    get id() {
+        return this._id;
+    }
+    get title() {
+        return this._title;
+    }
+    get author() {
+        return this._author;
+    }
+    get year() {
+        return this._year;
     }
 }
 class LibraryManager {
     constructor() {
-        this.books = [];
+        this._books = [];
     }
     addBook(title, author, year) {
-        let id = this.books.length > 0 ? this.books[this.books.length - 1].id + 1 : 1;
-        let newBook = new Book(id, title, author, year);
-        this.books.push(newBook);
+        const id = this._books.length > 0 ? this._books[this._books.length - 1].id + 1 : 1;
+        const newBook = new Book(id, title, author, year);
+        this._books.push(newBook);
         console.log("📚 Sách đã được thêm vào thư viện.");
     }
     listBooks() {
-        if (this.books.length === 0) {
+        if (this._books.length === 0) {
             console.log("⚠️ Thư viện chưa có sách nào.");
         }
         else {
             console.log("📚 Danh sách sách trong thư viện:");
-            this.books.forEach(book => {
+            this._books.forEach(book => {
                 console.log(`${book.id}. Tên sách: ${book.title}, Tác giả: ${book.author}, Năm xuất bản: ${book.year}`);
             });
         }
     }
     removeBook(id) {
-        const index = this.books.findIndex(book => book.id === id);
+        const index = this._books.findIndex(book => book.id === id);
         if (index !== -1) {
-            this.books.splice(index, 1);
+            this._books.splice(index, 1);
             console.log("📚 Sách đã được xóa khỏi thư viện.");
         }
         else {
@@ -40,7 +51,7 @@ class LibraryManager {
         }
     }
     searchBook(title) {
-        const foundBooks = this.books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
+        const foundBooks = this._books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
         if (foundBooks.length > 0) {
             console.log("📚 Kết quả tìm kiếm:");
             foundBooks.forEach(book => {
@@ -53,7 +64,10 @@ class LibraryManager {
     }
 }
 class Main3 {
-    static start() {
+    constructor() {
+        this.libraryManager = new LibraryManager();
+    }
+    start() {
         let running = true;
         while (running) {
             let choice = prompt("Chọn chức năng:\n" +
@@ -111,5 +125,5 @@ class Main3 {
         }
     }
 }
-Main3.libraryManager = new LibraryManager();
-Main3.start();
+let app3 = new Main3();
+app3.start();

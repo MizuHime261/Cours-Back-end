@@ -22,7 +22,10 @@ class Calculator {
     }
 }
 class Main1 {
-    static start() {
+    constructor() {
+        this._calculator = new Calculator();
+    }
+    start() {
         let running = true;
         while (running) {
             let choice = prompt("Chọn chức năng:\n" +
@@ -35,26 +38,26 @@ class Main1 {
                 case "1": {
                     let a = Number(prompt("Nhập số thứ nhất:"));
                     let b = Number(prompt("Nhập số thứ hai:"));
-                    console.log(`${a} + ${b} = ${this.calculator.add(a, b)}`);
+                    console.log(`${a} + ${b} = ${this._calculator.add(a, b)}`);
                     break; // thêm break để không tiếp tục vào các case sau
                 }
                 case "2": {
                     let a = Number(prompt("Nhập số thứ nhất:"));
                     let b = Number(prompt("Nhập số thứ hai:"));
-                    console.log(`${a} - ${b} = ${this.calculator.subtract(a, b)}`);
+                    console.log(`${a} - ${b} = ${this._calculator.subtract(a, b)}`);
                     break;
                 }
                 case "3": {
                     let a = Number(prompt("Nhập số thứ nhất:"));
                     let b = Number(prompt("Nhập số thứ hai:"));
-                    console.log(`${a} * ${b} = ${this.calculator.multiply(a, b)}`); // sửa lỗi gọi phương thức multiply
+                    console.log(`${a} * ${b} = ${this._calculator.multiply(a, b)}`); // sửa lỗi gọi phương thức multiply
                     break;
                 }
                 case "4": {
                     let a = Number(prompt("Nhập số thứ nhất:"));
                     let b = Number(prompt("Nhập số thứ hai:"));
                     try {
-                        console.log(`${a} / ${b} = ${this.calculator.divide(a, b)}`);
+                        console.log(`${a} / ${b} = ${this._calculator.divide(a, b)}`);
                     }
                     catch (error) {
                         console.error(error.message);
@@ -74,5 +77,5 @@ class Main1 {
         }
     }
 }
-Main1.calculator = new Calculator();
-Main1.start();
+let app1 = new Main1();
+app1.start();

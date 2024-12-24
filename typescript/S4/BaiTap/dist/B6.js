@@ -132,7 +132,7 @@ class TaskManager {
 }
 class Main6 {
     constructor() {
-        this.manager = new TaskManager();
+        this._manager = new TaskManager();
     }
     start() {
         let running = true;
@@ -148,25 +148,25 @@ class Main6 {
                 case "1":
                     const employeeName = prompt("Nhập tên nhân viên:");
                     if (employeeName)
-                        this.manager.addEmployee(employeeName);
+                        this._manager.addEmployee(employeeName);
                     break;
                 case "2":
                     const taskTitle = prompt("Nhập tên công việc:");
                     const taskDeadline = prompt("Nhập hạn hoàn thành (YYYY-MM-DD):");
                     if (taskTitle && taskDeadline)
-                        this.manager.addTask(taskTitle, taskDeadline);
+                        this._manager.addTask(taskTitle, taskDeadline);
                     break;
                 case "3":
                     const employeeId = parseInt(prompt("Nhập ID nhân viên:") || "0", 10);
                     const taskId = parseInt(prompt("Nhập ID công việc:") || "0", 10);
-                    this.manager.assignTask(employeeId, taskId);
+                    this._manager.assignTask(employeeId, taskId);
                     break;
                 case "4":
                     const completeTaskId = parseInt(prompt("Nhập ID công việc hoàn thành:") || "0", 10);
-                    this.manager.completeTask(completeTaskId);
+                    this._manager.completeTask(completeTaskId);
                     break;
                 case "5":
-                    this.manager.listTasks();
+                    this._manager.listTasks();
                     break;
                 case "6":
                     running = false;
