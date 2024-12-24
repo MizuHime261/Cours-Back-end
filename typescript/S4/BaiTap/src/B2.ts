@@ -52,9 +52,9 @@ class GeometryCalculator {
 }
 
 class Main2 {
-    static geometryCalculator: GeometryCalculator = new GeometryCalculator();
+    private _geometryCalculator: GeometryCalculator = new GeometryCalculator();
 
-    static start(): void {
+    start(): void {
         let running = true;
 
         while (running) {
@@ -70,42 +70,42 @@ class Main2 {
             switch (choice) {
                 case "1": {
                     let radius = Number(prompt("Nhập bán kính hình tròn:"));
-                    console.log(`Diện tích hình tròn có bán kính = ${radius} là: ${this.geometryCalculator.circleArea(radius)}`);
-                    console.log(`Chu vi hình tròn có bán kính = ${radius} là: ${this.geometryCalculator.circlePerimeter(radius)}`);
+                    console.log(`Diện tích hình tròn có bán kính = ${radius} là: ${this._geometryCalculator.circleArea(radius)}`);
+                    console.log(`Chu vi hình tròn có bán kính = ${radius} là: ${this._geometryCalculator.circlePerimeter(radius)}`);
                     break;
                 }
                 case "2": {
                     let base = Number(prompt("Nhập đáy hình tam giác:"));
                     let height = Number(prompt("Nhập chiều cao hình tam giác:"));
-                    console.log(`Diện tích hình tam giác có đáy = ${base} và chiều cao = ${height} là: ${this.geometryCalculator.triangleArea(base, height)}`);
+                    console.log(`Diện tích hình tam giác có đáy = ${base} và chiều cao = ${height} là: ${this._geometryCalculator.triangleArea(base, height)}`);
                     let a = Number(prompt("Nhập cạnh thứ nhất của tam giác:"));
                     let b = Number(prompt("Nhập cạnh thứ hai của tam giác:"));
                     let c = Number(prompt("Nhập cạnh thứ ba của tam giác:"));
-                    console.log(`Chu vi hình tam giác có 3 cạnh = ${a}, ${b}, ${c} là: ${this.geometryCalculator.trianglePerimeter(a, b, c)}`);
+                    console.log(`Chu vi hình tam giác có 3 cạnh = ${a}, ${b}, ${c} là: ${this._geometryCalculator.trianglePerimeter(a, b, c)}`);
                     break;
                 }
                 case "3": {
                     let width = Number(prompt("Nhập chiều rộng hình chữ nhật:"));
                     let height = Number(prompt("Nhập chiều cao hình chữ nhật:"));
-                    console.log(`Diện tích hình chữ nhật có chiều rộng = ${width} và chiều dài = ${height} là: ${this.geometryCalculator.rectangleArea(width, height)}`);
-                    console.log(`Chu vi hình chữ nhật có chiều rộng = ${width} và chiều dài = ${height} là: ${this.geometryCalculator.rectanglePerimeter(width, height)}`);
+                    console.log(`Diện tích hình chữ nhật có chiều rộng = ${width} và chiều dài = ${height} là: ${this._geometryCalculator.rectangleArea(width, height)}`);
+                    console.log(`Chu vi hình chữ nhật có chiều rộng = ${width} và chiều dài = ${height} là: ${this._geometryCalculator.rectanglePerimeter(width, height)}`);
                     break;
                 }
                 case "4": {
                     let base = Number(prompt("Nhập đáy hình bình hành:"));
                     let height = Number(prompt("Nhập chiều cao hình bình hành:"));
-                    console.log(`Diện tích hình bình hành có đáy = ${base} và chiều cao = ${height} là: ${this.geometryCalculator.parallelogramArea(base, height)}`);
+                    console.log(`Diện tích hình bình hành có đáy = ${base} và chiều cao = ${height} là: ${this._geometryCalculator.parallelogramArea(base, height)}`);
                     let a = Number(prompt("Nhập cạnh thứ nhất của hình bình hành:"));
                     let b = Number(prompt("Nhập cạnh thứ hai của hình bình hành:"));
-                    console.log(`Chu vi hình bình hành có 2 cạnh = ${a}, ${b} là: ${this.geometryCalculator.parallelogramPerimeter(a, b)}`);
+                    console.log(`Chu vi hình bình hành có 2 cạnh = ${a}, ${b} là: ${this._geometryCalculator.parallelogramPerimeter(a, b)}`);
                     break;
                 }
                 case "5": {
                     let d1 = Number(prompt("Nhập đường chéo thứ nhất của hình thoi:"));
                     let d2 = Number(prompt("Nhập đường chéo thứ hai của hình thoi:"));
-                    console.log(`Diện tích hình thoi có đường chéo thứ nhất = ${d1} và đường chéo thứ 2 = ${d2} là: ${this.geometryCalculator.rhombusArea(d1, d2)}`);
+                    console.log(`Diện tích hình thoi có đường chéo thứ nhất = ${d1} và đường chéo thứ 2 = ${d2} là: ${this._geometryCalculator.rhombusArea(d1, d2)}`);
                     let side = Number(prompt("Nhập cạnh hình thoi:"));
-                    console.log(`Chu vi hình thoi có cạnh = ${side} là: ${this.geometryCalculator.rhombusPerimeter(side)}`);
+                    console.log(`Chu vi hình thoi có cạnh = ${side} là: ${this._geometryCalculator.rhombusPerimeter(side)}`);
                     break;
                 }
                 case "6": {
@@ -121,4 +121,5 @@ class Main2 {
     }
 }
 
-Main2.start();
+let app2 = new Main2();
+app2.start();

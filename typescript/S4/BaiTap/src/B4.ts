@@ -1,43 +1,83 @@
-// Ứng dụng quản lý cửa hàng băng đĩa
 class CD {
-    id: number;
-    title: string;
-    artist: string;
-    year: number;
+    private static _idCounter = 1;
+    private _id: number;
+    private _title: string;
+    private _artist: string;
+    private _year: number;
 
-    constructor(id: number, title: string, artist: string, year: number){
-        this.id = id;
-        this.title = title;
-        this.artist = artist;
-        this.year = year
+    constructor(title: string, artist: string, year: number) {
+        this._id = CD._idCounter++;
+        this._title = title;
+        this._artist = artist;
+        this._year = year;
+    }
+
+    get id(): number {
+        return this._id;
+    }
+
+    get title(): string {
+        return this._title;
+    }
+
+    set title(value: string) {
+        if (!value.trim()) {
+            throw new Error("Tên CD không được để trống.");
+        }
+        this._title = value;
+    }
+
+    get artist(): string {
+        return this._artist;
+    }
+
+    set artist(value: string) {
+        if (!value.trim()) {
+            throw new Error("Nghệ sĩ không được để trống.");
+        }
+        this._artist = value;
+    }
+
+    get year(): number {
+        return this._year;
+    }
+
+    set year(value: number) {
+        if (value < 1900 || value > new Date().getFullYear()) {
+            throw new Error("Năm phát hành không hợp lệ.");
+        }
+        this._year = value;
     }
 }
 
 class CDStoreManager {
-    cds: CD[] = [];
+    private _cds: CD[];
+
+    constructor() {
+        this._cds = [];
+    }
 
     addCD(title: string, artist: string, year: number): void {
-        const id = this.cds.length > 0 ? this.cds[this.cds.length - 1].id + 1 : 1;
-        const newCD = new CD(id, title, artist, year);
-        this.cds.push(newCD);
+        const newCD = new CD(title, artist, year);
+        this._cds.push(newCD);
         console.log("🎶 CD đã được thêm vào cửa hàng.");
     }
 
     listCDs(): void {
-        if (this.cds.length === 0) {
+        if (this._cds.length === 0) {
             console.log("⚠️ Cửa hàng chưa có CD nào.");
         } else {
             console.log("🎶 Danh sách CD trong cửa hàng:");
-            this.cds.forEach(cd => {
+            this._cds.forEach(cd => {
                 console.log(`${cd.id}. Tên CD: ${cd.title}, Nghệ sĩ: ${cd.artist}, Năm phát hành: ${cd.year}`);
             });
         }
     }
 
     removeCD(id: number): void {
-        const index = this.cds.findIndex(cd => cd.id === id);
+        const index = this._cds.findIndex(cd => cd.id === id);
         if (index !== -1) {
-            this.cds.splice(index, 1);
+            this._cds.splice(index, 1);
             console.log("🎶 CD đã được xóa khỏi cửa hàng.");
         } else {
             console.log("⚠️ Không tìm thấy CD với mã này.");
@@ -45,7 +85,7 @@ class CDStoreManager {
     }
 
     searchCD(title: string): void {
-        const foundCDs = this.cds.filter(cd => cd.title.toLowerCase().includes(title.toLowerCase()));
+        const foundCDs = this._cds.filter(cd => cd.title.toLowerCase().includes(title.toLowerCase()));
         if (foundCDs.length > 0) {
             console.log("🎶 Kết quả tìm kiếm:");
             foundCDs.forEach(cd => {
@@ -58,9 +98,9 @@ class CDStoreManager {
 }
 
 class Main4 {
-    private static cdStoreManager: CDStoreManager = new CDStoreManager();
+    private _cdStoreManager: CDStoreManager = new CDStoreManager();
 
-    static start(): void {
+    start(): void {
         let running = true;
 
         while (running) {
@@ -79,20 +119,20 @@ class Main4 {
                     let artist = prompt("Nhập nghệ sĩ biểu diễn:");
                     let year = Number(prompt("Nhập năm phát hành:"));
                     if (title && artist && !isNaN(year)) {
-                        this.cdStoreManager.addCD(title, artist, year);
+                        this._cdStoreManager.addCD(title, artist, year);
                     } else {
                         console.log("⚠️ Thông tin CD không hợp lệ.");
                     }
                     break;
                 }
                 case "2": {
-                    this.cdStoreManager.listCDs();
+                    this._cdStoreManager.listCDs();
                     break;
                 }
                 case "3": {
                     let id = Number(prompt("Nhập mã CD cần xóa:"));
                     if (!isNaN(id)) {
-                        this.cdStoreManager.removeCD(id);
+                        this._cdStoreManager.removeCD(id);
                     } else {
                         console.log("⚠️ Mã CD không hợp lệ.");
                     }
@@ -101,7 +141,7 @@ class Main4 {
                 case "4": {
                     let title = prompt("Nhập tên CD cần tìm:");
                     if (title) {
-                        this.cdStoreManager.searchCD(title);
+                        this._cdStoreManager.searchCD(title);
                     } else {
                         console.log("⚠️ Tên CD không hợp lệ.");
                     }
@@ -120,4 +160,5 @@ class Main4 {
     }
 }
 
-Main4.start();
+let app4 = new Main4();
+app4.start();
