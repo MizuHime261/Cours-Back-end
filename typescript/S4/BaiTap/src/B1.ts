@@ -25,8 +25,11 @@ class Calculator {
 }
 
 class Main1 {
-    private _calculator: Calculator = new Calculator();
+    private _calculator: Calculator;
 
+    constructor() {
+        this._calculator = new Calculator();
+    }
     start(): void {
         let running = true;
 
@@ -84,4 +87,4 @@ class Main1 {
 }
 
 let app1 = new Main1();
-app1.start();
+app1.start

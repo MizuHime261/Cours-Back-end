@@ -52,7 +52,11 @@ class GeometryCalculator {
 }
 
 class Main2 {
-    private _geometryCalculator: GeometryCalculator = new GeometryCalculator();
+    private _geometryCalculator: GeometryCalculator;
+
+    constructor(){
+        this._geometryCalculator = new GeometryCalculator();
+    }
 
     start(): void {
         let running = true;

@@ -77,7 +77,11 @@ class LibraryManager {
 }
 
 class Main3 {
-    private libraryManager: LibraryManager = new LibraryManager();
+    private _libraryManager: LibraryManager;
+
+    constructor(){
+        this._libraryManager = new LibraryManager();
+    }
 
     start(): void {
         let running = true;
@@ -98,20 +102,20 @@ class Main3 {
                     let author = prompt("Nhập tên tác giả:");
                     let year = Number(prompt("Nhập năm xuất bản:"));
                     if (title && author && !isNaN(year)) {
-                        this.libraryManager.addBook(title, author, year);
+                        this._libraryManager.addBook(title, author, year);
                     } else {
                         console.log("⚠️ Thông tin sách không hợp lệ.");
                     }
                     break;
                 }
                 case "2": {
-                    this.libraryManager.listBooks();
+                    this._libraryManager.listBooks();
                     break;
                 }
                 case "3": {
                     let id = Number(prompt("Nhập mã sách cần xóa:"));
                     if (!isNaN(id)) {
-                        this.libraryManager.removeBook(id);
+                        this._libraryManager.removeBook(id);
                     } else {
                         console.log("⚠️ Mã sách không hợp lệ.");
                     }
@@ -120,7 +124,7 @@ class Main3 {
                 case "4": {
                     let title = prompt("Nhập tên sách cần tìm:");
                     if (title) {
-                        this.libraryManager.searchBook(title);
+                        this._libraryManager.searchBook(title);
                     } else {
                         console.log("⚠️ Tên sách không hợp lệ.");
                     }

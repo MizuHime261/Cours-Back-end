@@ -170,7 +170,11 @@ class TaskManager {
 }
 
 class Main6 {
-    private _manager: TaskManager = new TaskManager();
+    private _manager: TaskManager;
+
+    constructor() {
+        this._manager = new TaskManager();
+    }
 
     start(): void {
         let running = true;

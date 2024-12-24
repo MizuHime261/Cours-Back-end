@@ -136,7 +136,11 @@ class StudyManager {
 }
 
 class Main5 {
-    private _manager: StudyManager = new StudyManager();
+    private _manager: StudyManager;
+    constructor() {
+        this._manager = new StudyManager();
+
+    }
 
     start(): void {
         let running = true;

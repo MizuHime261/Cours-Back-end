@@ -98,7 +98,11 @@ class CDStoreManager {
 }
 
 class Main4 {
-    private _cdStoreManager: CDStoreManager = new CDStoreManager();
+    private _cdStoreManager: CDStoreManager;
+
+    constructor() {
+        this._cdStoreManager = new CDStoreManager();
+    }
 
     start(): void {
         let running = true;
