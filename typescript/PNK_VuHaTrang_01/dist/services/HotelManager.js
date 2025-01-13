@@ -1,6 +1,7 @@
 import { Person } from "../models/Person.js";
 import { StandardRoom, DeluxeRoom, SuiteRoom } from "../models/Room.js";
 import { Booking } from "../models/Booking.js";
+import { roomTypes } from "../constants/constants.js";
 export class HotelManager {
     constructor() {
         this._rooms = [];
@@ -13,28 +14,28 @@ export class HotelManager {
     addRoom(type, pricePerNight) {
         let room;
         const standardPrice = this._rooms
-            .filter(r => r.getRoomType() === "Standard")
+            .filter(r => r.getRoomType() === roomTypes[0])
             .map(r => r.getPricePerNight());
         const deluxePrice = this._rooms
-            .filter(r => r.getRoomType() === "Deluxe")
+            .filter(r => r.getRoomType() === roomTypes[1])
             .map(r => r.getPricePerNight());
         const suitePrice = this._rooms
-            .filter(r => r.getRoomType() === "Suite")
+            .filter(r => r.getRoomType() === roomTypes[2])
             .map(r => r.getPricePerNight());
-        if ((type === "Standard" && deluxePrice.some(price => price <= pricePerNight)) ||
-            (type === "Deluxe" && (standardPrice.some(price => price >= pricePerNight) || suitePrice.some(price => price <= pricePerNight))) ||
-            (type === "Suite" && deluxePrice.some(price => price >= pricePerNight))) {
+        if ((type === roomTypes[0] && deluxePrice.some(price => price <= pricePerNight)) ||
+            (type === roomTypes[1] && (standardPrice.some(price => price >= pricePerNight) || suitePrice.some(price => price <= pricePerNight))) ||
+            (type === roomTypes[2] && deluxePrice.some(price => price >= pricePerNight))) {
             console.log("Thêm phòng không hợp lệ. Giá phòng phải theo thứ tự: Standard < Deluxe < Suite.");
             return;
         }
         switch (type) {
-            case "Standard":
+            case roomTypes[0]:
                 room = new StandardRoom(HotelManager._roomIdCounter++, pricePerNight);
                 break;
-            case "Deluxe":
+            case roomTypes[1]:
                 room = new DeluxeRoom(HotelManager._roomIdCounter++, pricePerNight);
                 break;
-            case "Suite":
+            case roomTypes[2]:
                 room = new SuiteRoom(HotelManager._roomIdCounter++, pricePerNight);
                 break;
             default:

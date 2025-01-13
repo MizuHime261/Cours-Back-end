@@ -1,27 +1,12 @@
 import { HotelManager } from "./services/HotelManager.js";
-
+import { printMenu } from "./utils/printMenu.js";
 class Main {
     private _manager: HotelManager = new HotelManager();
 
     start(): void {
         let running = true;
         while (running) {
-            const choice = prompt(
-                "Chọn chức năng:\n" +
-                "1. Thêm khách hàng\n" +
-                "2. Thêm phòng\n" +
-                "3. Đặt phòng\n" +
-                "4. Trả phòng\n" +
-                "5. Hiển thị danh sách phòng còn trống\n" +
-                "6. Hiển thị danh sách đặt phòng của khách hàng\n" +
-                "7. Tính tổng doanh thu\n" +
-                "8. Đếm số lượng từng loại phòng\n" +
-                "9. Áp dụng giảm giá cho phòng\n" +
-                "10. Hiển thị các dịch vụ bổ sung của phòng\n" +
-                "11. Hiển thị chính sách hủy phòng\n" +
-                "12. Thoát chương trình\n"
-            );
-
+            const choice = prompt(printMenu());
             switch (choice) {
                 case "1":
                     const customerName = prompt("Nhập tên khách hàng:");
@@ -35,7 +20,7 @@ class Main {
                     break;
 
                 case "2":
-                    const roomType = prompt("Nhập loại phòng (Standard/Deluxe/Suite):");
+                    const roomType = prompt("Nhập loại phòng (0.Standard/1.Deluxe/2.Suite):");
                     const roomPrice = parseFloat(prompt("Nhập giá phòng/đêm:") || "0");
                     if (roomType && roomPrice > 0) {
                         this._manager.addRoom(roomType, roomPrice);
