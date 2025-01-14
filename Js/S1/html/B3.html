@@ -8,24 +8,24 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Nhập mảng và tìm số lớn nhất</h1>
+    <div class="container">
+        <h1>Nhập mảng và tìm số lớn nhất</h1>
 
-    <label for="arraySize">Số phần tử của mảng:</label>
-    <input type="number" id="arraySize" min="1" placeholder="Nhập số phần tử" onkeydown="handleArraySizeEnter(event)">
+        <label for="arraySize">Số phần tử của mảng:</label>
+        <input type="number" id="arraySize" min="1" placeholder="Nhập số phần tử" onkeydown="handleArraySizeEnter(event)">
 
-    <button onclick="nhapMang()">Nhập mảng</button>
+        <button onclick="nhapMang()">Nhập mảng</button>
 
-    <div id="inputArray"></div>
+        <div id="inputArray"></div>
 
-    <button id="btnFindMax" onclick="timMax()" style="display: none;">Tìm số lớn nhất</button>
+        <button id="btnFindMax" onclick="timMax()" style="display: none;">Tìm số lớn nhất</button>
 
-    <div class="result" id="result"></div>
+        <div class="result" id="result"></div>
 
-    <div class="note">
-        <p><strong>Lưu ý:</strong> Khi nhập số thực, vui lòng sử dụng dấu chấm (.) thay vì dấu phẩy (ví dụ: <code>3.4</code> hay <code>-5.6</code>).</p>
+        <div class="note">
+            <p><strong>Lưu ý:</strong> Khi nhập số thực, vui lòng sử dụng dấu chấm (.) thay vì dấu phẩy (ví dụ: <code>3.4</code> hay <code>-5.6</code>).</p>
+        </div>
     </div>
-</div>
 
 <script src="../js/B3_Max.js"></script>
 </body>
