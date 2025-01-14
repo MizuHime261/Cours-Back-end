@@ -57,7 +57,7 @@ class Main {
                     const discountRate = parseFloat(prompt("Nhập phần trăm giảm giá: ")!);
                     console.log("Danh sách giá sau giảm:");
                     this.productManager.listProducts().forEach(product => {
-                        console.log(`${product.getName()}: $${product.calculateDiscount(discountRate)}`); 
+                        console.log(`${product.getName()}: ${product.calculateDiscount(discountRate)}`); 
                     });
                     break;
                 case 8:
