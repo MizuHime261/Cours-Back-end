@@ -1,15 +1,15 @@
 {
-  "name": "express_node_session01",
+  "name": "node-session02",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
+  "main": "server2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server2.js"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
+  "dependencies": {
     "nodemon": "^3.1.9"
   }
 }
