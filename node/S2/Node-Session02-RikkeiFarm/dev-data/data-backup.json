@@ -16,7 +16,7 @@
     "image": "🧀",
     "from": "Portugal",
     "nutrients": "Vitamin A, Calcium",
-    "quantity": "250g 🧀",
+    "quantity": "250g",
     "price": "5.00",
     "organic": false,
     "description": "Creamy and distinct in flavor, goat cheese is a dairy product enjoyed around the world. Goat cheese comes in a wide variety of flavors and textures, from soft and spreadable fresh cheese to salty, crumbly aged cheese. Although it’s made using the same coagulation and separation process as cheese made from cow’s milk, goat cheese differs in nutrient content."
@@ -130,5 +130,93 @@
     "price": "6.45",
     "organic": true,
     "description": "Peaches are juicy and sweet stone fruits with a velvety skin. They're packed with vitamins and antioxidants, making them a great choice for a healthy snack or addition to desserts. Peaches are often eaten fresh, but they can also be used in jams, smoothies, or baked goods. The fruit supports immune health, skin care, and digestion due to its high vitamin content."
+  },
+  {
+    "id": "12",
+    "productName": "Crispy Lettuce",
+    "image": "🥬",
+    "from": "Netherlands",
+    "nutrients": "Vitamin A, Fiber",
+    "quantity": "14 🥬",
+    "price": "2.50",
+    "organic": true,
+    "description": "Lettuce is a leafy green vegetable known for its crisp texture and mild flavor. It's a great source of vitamins and fiber, often used in salads, sandwiches, and wraps."
+  },
+  {
+    "id": "13",
+    "productName": "Golden Pineapples",
+    "image": "🍍",
+    "from": "Philippines",
+    "nutrients": "Vitamin C, Bromelain",
+    "quantity": "12 🍍",
+    "price": "3.50",
+    "organic": false,
+    "description": "Pineapples are tropical fruits with a sweet and tangy flavor. They are rich in vitamin C and bromelain, an enzyme known for its digestive benefits."
+  },
+  {
+    "id": "14",
+    "productName": "Fresh Grapes",
+    "image": "🍇",
+    "from": "France",
+    "nutrients": "Vitamin C, Antioxidants",
+    "quantity": "500 g",
+    "price": "4.75",
+    "organic": true,
+    "description": "Grapes are juicy and sweet fruits that come in different colors, including red, green, and purple. They are rich in antioxidants and commonly eaten fresh or used to make wine and juice."
+  },
+  {
+    "id": "15",
+    "productName": "Organic Almonds",
+    "image": "🌰",
+    "from": "USA",
+    "nutrients": "Vitamin E, Magnesium",
+    "quantity": "250 g",
+    "price": "7.00",
+    "organic": true,
+    "description": "Almonds are nutrient-dense nuts that are high in healthy fats, vitamin E, and magnesium. They are a great snack and can be used in baking, salads, or smoothies."
+  },
+  {
+    "id": "16",
+    "productName": "Roasted Peanuts",
+    "image": "🥜",
+    "from": "Vietnam",
+    "nutrients": "Protein, Fiber",
+    "quantity": "300 g",
+    "price": "3.00",
+    "organic": false,
+    "description": "Peanuts are rich in protein and fiber, making them a great energy-boosting snack. Roasted peanuts have a delicious, nutty flavor and can be eaten alone or added to dishes."
+  },
+  {
+    "id": "17",
+    "productName": "Ripe Watermelon",
+    "image": "🍉",
+    "from": "Thailand",
+    "nutrients": "Vitamin A, Hydration",
+    "quantity": "32 🍉",
+    "price": "6.00",
+    "organic": false,
+    "description": "Watermelon is a hydrating fruit with a juicy, refreshing taste. It is packed with vitamins and minerals, making it a great summer snack."
+  },
+  {
+    "id": "18",
+    "productName": "Organic Chia Seeds",
+    "image": "🌱",
+    "from": "Peru",
+    "nutrients": "Omega-3, Fiber",
+    "quantity": "200 g",
+    "price": "5.50",
+    "organic": true,
+    "description": "Chia seeds are small but packed with nutrients, including omega-3 fatty acids and fiber. They are often added to smoothies, yogurt, or puddings for a health boost."
+  },
+  {
+    "id": "19",
+    "productName": "Organic Dates",
+    "image": "🍈",
+    "from": "Egypt",
+    "nutrients": "Iron, Fiber",
+    "quantity": "500 g",
+    "price": "6.50",
+    "organic": true,
+    "description": "Dates are naturally sweet fruits that are rich in fiber and iron. They are often eaten as a snack, used in desserts, or blended into smoothies."
   }
 ]

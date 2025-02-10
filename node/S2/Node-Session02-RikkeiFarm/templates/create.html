@@ -187,39 +187,48 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const errorMessage = ""; // Replace with actual error message logic
-            const errorMessageDiv = document.getElementById("error-message");
+document.addEventListener("DOMContentLoaded", function() {
+    const errorMessage = ""; // Replace with actual error message logic
+    const errorMessageDiv = document.getElementById("error-message");
 
-            if (errorMessage) {
-                errorMessageDiv.style.display = "block";
-                errorMessageDiv.textContent = errorMessage;
-            } else {
-                errorMessageDiv.style.display = "none";
-            }
-            const quantityInput = document.getElementById("quantity");
-            const imageInput = document.querySelector("input[name='image']");
+    if (errorMessage) {
+        errorMessageDiv.style.display = "block";
+        errorMessageDiv.textContent = errorMessage;
+    } else {
+        errorMessageDiv.style.display = "none";
+    }
+    
+    const quantityInput = document.getElementById("quantity");
+    const imageInput = document.querySelector("input[name='image']");
+
+    quantityInput.addEventListener("input", function() {
+        let value = quantityInput.value.trim();
+        let emoji = imageInput.value.trim();
+
+        // Nếu là URL thì không lấy emoji
+        if (emoji.startsWith("http")) {
+            emoji = "";
+        }
+
+        // Kiểm tra nếu đầu vào có dạng số + đơn vị hoặc emoji
+        const match = value.match(/^(\d+)?\s*(g|kg)?$/u);
         
-            quantityInput.addEventListener("input", function() {
-                let emoji = imageInput.value.trim();
-
-                // Kiểm tra nếu là URL thì không lấy emoji
-                if (emoji.startsWith("http")) {
-                    emoji = "";
-                }
-
-                // Lọc để chỉ giữ lại số
-                let numberValue = quantityInput.value.replace(/\D/g, "");
-
-                // Kiểm tra nếu số <= 0 thì đặt về ""
-                if (numberValue === "" || Number(numberValue) <= 0) {
-                    numberValue = "";
-                }
-
-                // Cập nhật lại giá trị input
-                quantityInput.value = numberValue + (emoji ? ` ${emoji}` : "");
-            });
-        });
+        if (match) {
+            let numberValue = match[1] ? match[1] : ""; // Lấy số nếu có
+            let unit = match[2] ? match[2].trim() : ""; // Lấy đơn vị nếu có
+            
+            // Nếu số <= 0 thì đặt về ""
+            if (numberValue !== "" && Number(numberValue) <= 0) {
+                quantityInput.value = "";
+            } else {
+                // Nếu nhập g hoặc kg thì emoji bị xóa, nếu không thì thêm emoji
+                quantityInput.value = numberValue + (unit ? ` ${unit}` : (emoji ? ` ${emoji}` : ""));
+            }
+        } else {
+            quantityInput.value = ""; // Nếu không hợp lệ, đặt về rỗng
+        }
+    });
+});
     </script>
 </body>
 </html>
