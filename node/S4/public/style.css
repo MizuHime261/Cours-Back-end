@@ -1,0 +1,197 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #f8d1cd; /* Hồng nhạt hơn */
+  font-size: 18px;
+  transition: background 0.2s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s;
+  border-bottom: 1px solid #F5B7B1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+/* Darker background on hover */
+ul li:hover {
+  background: #F5B7B1;
+  transform: scale(1.02);
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Checked items */
+ul li.checked {
+  background: #E5989B;
+  color: #fff;
+  text-decoration: line-through;
+  box-shadow: none;
+}
+
+/* Checked mark */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #E74C3C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  background-color: #C0392B;
+  box-shadow: 3px 3px 10px rgba(231, 76, 60, 0.5);
+}
+
+/* Edit button */
+.edit-btn {
+  position: absolute;
+  right: 50px;
+  top: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #F39C12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #D68910;
+  box-shadow: 3px 3px 10px rgba(243, 156, 18, 0.5);
+}
+
+/* Header với hiệu ứng gradient + box-shadow */
+.header {
+  background: linear-gradient(to right, #F5B7B1, #F1948A);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Input */
+input {
+  margin: 0;
+  border: 1px solid #F5B7B1;
+  border-radius: 8px;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+input:focus {
+  border-color: #E74C3C;
+  box-shadow: 0px 0px 12px rgba(231, 76, 60, 0.5);
+}
+
+/* Add button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #E5989B;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addBtn:hover {
+  background-color: #D77A83;
+  box-shadow: 3px 3px 12px rgba(236, 112, 99, 0.5);
+}
+
+/* Input edit mode */
+.edit-input {
+  width: 75%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #F5B7B1;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.edit-input:focus {
+  border-color: #F39C12;
+  box-shadow: 0px 0px 12px rgba(243, 156, 18, 0.5);
+}
+
+/* Hiệu ứng transition nhẹ khi hiện/ẩn */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dragging {
+  opacity: 0.5;
+  background-color: #f8d7da; /* Màu nền nhạt hơn khi kéo */
+  border: 2px dashed #dc3545; /* Viền gạch */
+}
+
+.draggable {
+  transition: transform 0.2s ease-in-out;
+}
