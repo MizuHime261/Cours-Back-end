@@ -1,23 +1,23 @@
-const express = require('express');
-const router = express.Router();
+const express= require('express');
+const router =express.Router();
+const fs = require('fs');
 
-router.get('/:id', function(req, res){
-    res.json({message: 'Get one user successfully'});
-})
+router.get("/:id",(req,res)=>{
+    res.json({message:"User detail"});
+});
+router.get("/",(req,res)=>{
+    let todo=fs.readFileSync('./data/todo.json','utf-8');
+    todo=JSON.parse(todo);
+    res.json(todo);
+});
 
-router.get('/', function(req, res){
-    res.json({message: 'Get all users successfully'});
-})
-
-router.post('/', function(req, res){
-    res.json({message: 'Create user successfully'});
-})
-
-router.put('/:id', function(req, res){
-    res.json({message: 'Update one user successfully'});
-})
-
-router.delete('/:id', function(req, res){
-    res.json({message: 'Delete one user successfully'});
-})
-module.exports = router;
+router.post("/",(req,res)=>{
+    res.json({message:"Create user"});
+});
+router.put("/:id",(req,res)=>{
+    res.json({message:"Update user"});
+});
+router.delete("/:id",(req,res)=>{
+    res.json({message:"Delete user"});
+});
+module.exports=router;

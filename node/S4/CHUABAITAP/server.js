@@ -1,75 +1,49 @@
-//npm install -g nodemon
-//npm install express
-//npm install nodemon
-//npm install body-parser
-//npm install -g json-server
-//npm i morgan
-// npm run dev
-const express =require('express');
-const fs= require('fs');
-const path = require('path');
-const bodyParser=require('body-parser');
-const morgan = require('morgan');
-const userRouter = require('./routers/user.routes.js');
-const todoRouter = require('./routers/todo.routes.js');
-
-const app = express();
-const port = 3000;
-
-// Kiểm tra xem request được gửi lên trên server
-// có tồn tại 1 trạng thái status = 1 hay không
-// - Nếu có thì tiếp tục response về phía client
-// - Nếu không ngay lập tức dừng quá trình req - res cycle
-function checkStatus(req, res, next){
-    let status = req.query.status;
-    if(status === '1'){
-        next();
-    } else {
-        res.json({message: 'Status is not 1'});
-    }
-}
-
-function catchErrors(error, req, res, next){
-    console.log(error);
-    res.json({error: error,}); 
-}
-
-function checkRole(req, res, next){
-    let role = req.query.role;
-    if(role === "1"){
-        next();
-    } else {
-        res.json({message: 'Invalid role'});
-    }
-}
-
-app.use(morgan('dev'));
+const bodyParser = require('body-parser');
+const express= require('express');
+const app= express();
+const morgan= require('morgan');
+const userRouter= require('./routers/user.router');
+const todoRouter= require('./routers/todo.router');
 app.use(express.static('public'));
-// app.use(catchErrors);
-// app.use(checkStatus);
+app.use(morgan("combined"));
+// app.use(catchErr);
+// app.use(checkRole);
+app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use('/users',userRouter);
+app.use('/todos',todoRouter);
 
+function checkStatus(req,res,next){
+    let status= req.query.status;
+    if(status==="1"){
+        next();
+    }
+    else{
+        res.json({message:"You are not allowed"});
+    }
+}
+function catchErr(err,req,res,next){
+    console.log(err);
+    res.json({message:"Error"});
+};
+function checkRole(req,res,next){
+    let role=req.query.role;
+    if(role==="1"){
+        next();
+    }else{
+        res.json({message:"ivalid role"});
+    }
+}
 
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/public/todo-list-layout.html');
-})
-
-app.get('/about', function (req, res) {
-    res.json({message: 'This is about page'});
-}) 
-
-app.get("/test-middleware", checkStatus, checkRole, function(req, res, next){
-    res.json({message: 'This is test middleware page'});
-})
-
-app.use('/users', userRouter);
-app.use('/todos', todoRouter);
-
-app.use((req, res) => {
-    res.status(404).send('<h1>404 Not Found</h1>');
-  })
-  
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`)
-})
+// app.get('/',checkStatus,(req,res)=>{
+//     res.send('<h1>This is homepage</h1>');
+// });
+app.get("/test-middleware",checkStatus,checkRole,(req,res)=>{
+    res.send("Test middleware");
+});
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname + '/public/todolist.html');
+});
+app.listen(3000,()=>{
+    console.log('http://localhost:3000');
+});
