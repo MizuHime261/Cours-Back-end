@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "content": "Get up",
+    "status": true
+  },
+  {
+    "id": 2,
+    "content": "Have breakfast",
+    "status": true
+  },
+  {
+    "id": 3,
+    "content": "Have lunch and rest",
+    "status": true
+  },
+  {
+    "id": 4,
+    "content": "Take a walk with the cat",
+    "status": false
+  },
+  {
+    "id": 5,
+    "content": "Have dinner and watch a movie",
+    "status": false
+  },
+  {
+    "id": 6,
+    "content": "Plan for tomorrow",
+    "status": false
+  },
+  {
+    "id": 7,
+    "content": "Go to sleep",
+    "status": false
+  }
+]
