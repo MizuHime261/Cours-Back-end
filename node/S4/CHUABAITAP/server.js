@@ -1,17 +1,16 @@
 const bodyParser = require('body-parser');
 const express= require('express');
+const path = require('path');
 const app= express();
 const morgan= require('morgan');
-const userRouter= require('./routers/user.router');
-const todoRouter= require('./routers/todo.router');
+const userRouter= require('./routers/user.routes');
+const todoRouter= require('./routers/todo.routes');
 app.use(express.static('public'));
 app.use(morgan("combined"));
 // app.use(catchErr);
 // app.use(checkRole);
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use('/users',userRouter);
-app.use('/todos',todoRouter);
 
 function checkStatus(req,res,next){
     let status= req.query.status;
@@ -41,9 +40,13 @@ function checkRole(req,res,next){
 app.get("/test-middleware",checkStatus,checkRole,(req,res)=>{
     res.send("Test middleware");
 });
+
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname + '/public/todolist.html');
+    res.sendFile(path.join(__dirname, 'public', 'todo-list-layout.html'));
 });
+app.use('/users',userRouter);
+app.use('/todos',todoRouter);
 app.listen(3000,()=>{
     console.log('http://localhost:3000');
+
 });
