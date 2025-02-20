@@ -11,28 +11,29 @@ const fs= require('fs');
 const path = require('path');
 const bodyParser=require('body-parser');
 const morgan = require('morgan');
-// const userRouter = require('./routers/user.routes.js');
-// const todoRouter = require('./routers/todo.routes.js');
+const questionRouter = require('./routers/question.routes.js');
+
 
 const app = express();
 const port = 3000;
 
 app.use(morgan('dev'));
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public/html')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // EX2
 app.get('/', function (req, res) {
-    res.send('This is homepage')
+    res.sendFile(path.join(__dirname, 'public/html/index.html'));
 })
 
 app.get(`/ask`, function (req, res) {
-    res.send('This is asking page')
+    res.sendFile(path.join(__dirname, 'public/html/ask.html'));
 })
 
 app.get(`/question-detail/:id`, function (req, res) {
-    res.send('This is a question detail page')
+    res.sendFile(path.join(__dirname, 'public/html/question-detail.html'));
 })
 
 // EX4
@@ -63,101 +64,12 @@ const checkExist = (req, res, next) => {
 }
 
 // EX3
-// link file
-const filePath = path.join(__dirname, './data/questions.json');
-// read file
-const readQuestions = () => {
-    const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data);
-}
-//write file
-const writeQuestions = (questions) => {
-    const data = JSON.stringify(questions, null, 2);
-    fs.writeFileSync(filePath, data);
-}
 
-// Buoc 1:
-app.get(`/api/v1/questions`, function (req, res) {
-    res.status(200).json(readQuestions());
-})
-
-// Buoc 2:
-app.get(`/api/v1/questions/:id`, checkExist, function (req, res) {
-    const questions = readQuestions();
-    const question = questions.find(q => q.id === Number(req.params.id));
-    res.status(200).json(question);
-})
-
-// Buoc 3:
-app.post(`/api/v1/questions`,checkExist, function (req, res) {
-    const questions = readQuestions();
-
-    // Tạo id cho câu hoi mới
-    const newQuestion = {
-        content: req.body.content,
-        like: req.body.like,
-        dislike: req.body.dislike,
-        id: questions.length ? questions[questions.length - 1].id + 1 : 1,
-    }
-
-    // Thêm câu hoi mới vào mảng questions
-    questions.push(newQuestion);
-    writeQuestions(questions);
-
-    // Trả về phản hồi thành công
-    res.status(201).json(
-        { message: "Create successfully", question: newQuestion}
-    );
-})
-
-// Buoc4:
-app.put(`/api/v1/questions/:id`, checkExist, function (req, res) {
-    const questions = readQuestions();
-
-    // Kiểm tra nếu id không tồn tại trong mảng
-    const questionId = Number(req.params.id);
-
-    // Nếu id không tồn tại trong mảng
-    const index = questions.findIndex( q => q.id === questionId );
-
-    // Cập nhật dữ liệu câu hỏi
-    const updatedQuestion = {
-        ...questions[index],
-        content: req.body.content || questions[index].content,
-        like: req.body.like !== undefined ? Number(req.body.like) : questions[index].like,
-        dislike: req.body.dislike !== undefined ? Number(req.body.dislike) : questions[index].dislike,
-    };
-
-    // Ghi đè dữ liệu vào mảng
-    questions[index] = updatedQuestion;
-    writeQuestions(questions);
-
-    // Trả về phản hồi thành công
-    res.status(200).json({ message: "Update successfully", question: updatedQuestion });
-})
-
-// Buoc 5:
-app.delete(`/api/v1/questions/:id`, checkExist, function(req, res) {
-    const questions = readQuestions();
-    const questionId = Number(req.params.id);
-
-    // Tìm vị trí của câu hỏi trong mảng
-    const index = questions.findIndex(q => q.id === questionId);
-
-    // Xóa câu hỏi khỏi mảng
-    questions.splice(index, 1);
-
-    // Ghi đè dữ liệu mới vào file JSON
-    writeQuestions(questions);
-
-    // Trả về phản hồi thành công
-    res.status(200).json({ message: "Delete successfully" });
-});
 // app.get('/', function (req, res) {
 //     res.sendFile(__dirname + '/public/todo-list-layout.html');
 // })
 
-// app.use('/users', userRouter);
+app.use('/api/v1/questions', questionRouter);
 // app.use('/todos', todoRouter);
 
 app.use((req, res) => {
@@ -167,3 +79,27 @@ app.use((req, res) => {
 app.listen(port, () => {
     console.log(`App listening on port http://localhost:${port}`)
 })
+
+
+// |data
+// |______backup-questions.json
+// |______questions.json
+// |node_modules
+// |public
+// |______css
+//           |_____ask.css
+//           |_____index.css
+//           |_____question-detail.css
+// |______html
+//           |_____ask.html
+//           |_____index.html
+//           |_____question-detail.html
+// |______js
+//           |_____ask.js
+//           |_____index.js
+//           |_____question-detail.js
+// |routers
+// |________question.routes.js
+// |app.js
+// |package-lock.json
+// |package.json

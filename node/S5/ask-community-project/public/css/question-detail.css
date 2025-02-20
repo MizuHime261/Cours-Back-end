@@ -1,0 +1,127 @@
+/* Đặt font chữ chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng thanh điều hướng */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Định dạng nội dung chính */
+.main-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.main-content h1 {
+    color: #333;
+    font-size: 1.8em;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ask-area {
+    margin-top: 20px;
+}
+
+/* Định dạng textarea */
+.question-content {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    background: white;
+}
+
+/* Định dạng nút gửi */
+#submit-btn, #btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit-btn:hover, #btn:hover {
+    background-color: #218838;
+}
+
+/* Định dạng phần vote */
+.vote {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.rate-bar {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.dislike {
+    width: 40%;
+    background: red;
+    color: white;
+    text-align: center;
+}
+
+.like {
+    width: 60%;
+    background: green;
+    color: white;
+    text-align: center;
+}

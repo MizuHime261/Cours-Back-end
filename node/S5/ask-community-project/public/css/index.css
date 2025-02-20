@@ -1,0 +1,114 @@
+/* Đặt font chữ chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Định dạng thanh điều hướng */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Định dạng nội dung chính */
+.main-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.main-content h1 {
+    color: #333;
+    font-size: 1.8em;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ask-area {
+    margin-top: 20px;
+}
+
+/* Định dạng textarea */
+.question-content {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+}
+
+/* Định dạng nhóm nút */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Định dạng nút Like và Dislike */
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+#dislike {
+    background-color: red;
+    color: white;
+}
+
+#dislike:hover {
+    background-color: darkred;
+}
+
+#like {
+    background-color: green;
+    color: white;
+}
+
+#like:hover {
+    background-color: darkgreen;
+}

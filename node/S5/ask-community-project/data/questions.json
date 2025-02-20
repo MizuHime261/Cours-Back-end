@@ -1,146 +1,230 @@
 [
   {
-    "content": "Anh Bách có motherfucking đẹp zai không =)))?",
-    "like": 2,
-    "dislike": 1,
+    "content": "Umi xinh không?",
+    "like": 20,
+    "dislike": 0,
     "id": 1
   },
   {
-    "content": "Phong có phải checker không?",
-    "like": 2,
-    "dislike": 4,
+    "content": "Yuki có béo không?",
+    "like": 21,
+    "dislike": 0,
     "id": 2
   },
   {
-    "content": "Việt Anh có gà vịt không?",
-    "like": 1,
-    "dislike": 5,
+    "content": "Báo có béo không?",
+    "like": 20,
+    "dislike": 0,
     "id": 3
   },
   {
-    "content": "Thầy Phú có biết massage không?",
-    "like": 3,
-    "dislike": 4,
+    "content": "Quýt có nghịch không?",
+    "like": 32,
+    "dislike": 1,
     "id": 4
   },
   {
-    "content": "Học ở Rikkei có khó không?",
-    "like": 2,
-    "dislike": 4,
+    "content": "Mèo có thích ăn cá không?",
+    "like": 25,
+    "dislike": 2,
     "id": 5
   },
   {
-    "content": "Mày chơi tao à =)))?",
-    "like": 3,
+    "content": "Mèo có ngủ nhiều không?",
+    "like": 30,
     "dislike": 3,
     "id": 6
   },
   {
-    "content": "An có giấu phóng lợn trong cốp không?",
-    "like": 2,
-    "dislike": 2,
+    "content": "Chó có thể nhận diện chủ nhân không?",
+    "like": 41,
+    "dislike": 5,
     "id": 7
   },
   {
-    "content": "Hùng có biết chơi chim không????",
-    "like": 2,
+    "content": "Mèo có thể nhận ra tên của mình không?",
+    "like": 27,
     "dislike": 4,
     "id": 8
   },
   {
-    "content": "Anh Đô có đô không???",
-    "like": 1,
-    "dislike": 3,
+    "content": "Chim có ngủ khi bay không?",
+    "like": 0,
+    "dislike": 0,
     "id": 9
   },
   {
-    "content": "Anh Hướng có vợ 2 không?",
-    "like": 1,
-    "dislike": 3,
+    "content": "Con người có thể sống trên sao Hỏa không?",
+    "like": 0,
+    "dislike": 0,
     "id": 10
   },
   {
-    "content": "Anh Thanh có phải đại gia ngầm không???",
-    "like": 3,
-    "dislike": 4,
+    "content": "Nước có thể cháy không?",
+    "like": 0,
+    "dislike": 0,
     "id": 11
   },
   {
-    "content": "Đức có chơi sẽ gầy với Khoa không???",
-    "like": 1,
-    "dislike": 2,
+    "content": "Mặt trời có tắt không?",
+    "like": 0,
+    "dislike": 0,
     "id": 12
   },
   {
-    "content": "Dũng có phải fuckboy không???",
-    "like": 2,
-    "dislike": 2,
+    "content": "Cá có ngủ không?",
+    "like": 0,
+    "dislike": 0,
     "id": 13
   },
   {
-    "content": "Chị Dinh với Trang có xinh không ???",
-    "like": 3,
-    "dislike": 2,
+    "content": "Con người có thể nhìn thấy tia hồng ngoại không?",
+    "like": 0,
+    "dislike": 0,
     "id": 14
   },
   {
-    "content": "Thống với Chung có phải con ngan con không ???",
-    "like": 2,
-    "dislike": 2,
+    "content": "Voi có biết bơi không?",
+    "like": 0,
+    "dislike": 0,
     "id": 15
   },
   {
-    "content": "Duy có phải con của Tony code dạo không??",
-    "like": 1,
-    "dislike": 2,
+    "content": "Bạch tuộc có thể thay đổi màu sắc không?",
+    "like": 0,
+    "dislike": 0,
     "id": 16
   },
   {
-    "content": "Thụ có thích chơi Công không??",
-    "like": 1,
-    "dislike": 2,
+    "content": "Tắc kè có thể mọc lại đuôi không?",
+    "like": 2,
+    "dislike": 0,
     "id": 17
   },
   {
-    "content": "Anh Biên có thích Dũng không??",
-    "like": 2,
-    "dislike": 2,
+    "content": "Con người có thể nghe được siêu âm không?",
+    "like": 0,
+    "dislike": 0,
     "id": 18
   },
   {
-    "content": "Thịnh có được Bình không??",
-    "like": 1,
-    "dislike": 2,
+    "content": "Cây có biết đau không?",
+    "like": 0,
+    "dislike": 0,
     "id": 19
   },
   {
-    "content": "Anh Mạnh có phải tiên tửu không??",
-    "like": 1,
-    "dislike": 2,
+    "content": "Cá voi có phải là cá không?",
+    "like": 0,
+    "dislike": 0,
     "id": 20
   },
   {
-    "content": "Umi xinh không??",
-    "like": 20,
+    "content": "Con người có thể sống mà không cần ngủ không?",
+    "like": 0,
     "dislike": 0,
     "id": 21
   },
   {
-    "content": "Yuki có béo không??",
-    "like": 20,
+    "content": "Tia sét có thể đánh hai lần vào cùng một chỗ không?",
+    "like": 1,
     "dislike": 0,
     "id": 22
   },
   {
-    "content": "Báo có béo không??",
-    "like": 20,
+    "content": "Mèo có thể nhìn thấy trong bóng tối hoàn toàn không?",
+    "like": 0,
     "dislike": 0,
     "id": 23
   },
   {
-    "content": "Quýt có nghịch không??",
-    "like": 30,
+    "content": "Băng có nổi trên nước không?",
+    "like": 0,
     "dislike": 0,
     "id": 24
+  },
+  {
+    "content": "Ngựa có ngủ đứng không?",
+    "like": 1,
+    "dislike": 0,
+    "id": 25
+  },
+  {
+    "content": "Bướm có thể nhớ được ký ức khi còn là sâu không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 26
+  },
+  {
+    "content": "Con người có thể sống hơn 200 năm không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 27
+  },
+  {
+    "content": "Loài chim có thể bay lùi không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 28
+  },
+  {
+    "content": "Cá có thể nghe thấy âm thanh không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 29
+  },
+  {
+    "content": "Mặt trăng có phát sáng không?",
+    "like": 1,
+    "dislike": 0,
+    "id": 30
+  },
+  {
+    "content": "Mèo có thể tự chữa lành vết thương bằng tiếng kêu không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 31
+  },
+  {
+    "content": "Có thể tạo ra nước từ không khí không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 32
+  },
+  {
+    "content": "Tia UV có thể xuyên qua kính không?",
+    "like": 1,
+    "dislike": 1,
+    "id": 33
+  },
+  {
+    "content": "Mèo có thể ăn sô cô la không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 34
+  },
+  {
+    "content": "Có thể dùng lửa để tạo ra băng không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 35
+  },
+  {
+    "content": "Mắt của con người có thể nhìn thấy bao nhiêu màu?",
+    "like": 0,
+    "dislike": 0,
+    "id": 36
+  },
+  {
+    "content": "Con người có thể sống mà không cần ăn không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 37
+  },
+  {
+    "content": "Trái đất có quay quanh mặt trời không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 38
   }
 ]
