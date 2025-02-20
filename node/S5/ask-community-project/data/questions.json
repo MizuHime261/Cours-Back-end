@@ -25,7 +25,7 @@
   },
   {
     "content": "Mèo có thích ăn cá không?",
-    "like": 25,
+    "like": 26,
     "dislike": 2,
     "id": 5
   },
@@ -43,7 +43,7 @@
   },
   {
     "content": "Mèo có thể nhận ra tên của mình không?",
-    "like": 27,
+    "like": 28,
     "dislike": 4,
     "id": 8
   },
@@ -73,7 +73,7 @@
   },
   {
     "content": "Cá có ngủ không?",
-    "like": 0,
+    "like": 1,
     "dislike": 0,
     "id": 13
   },
@@ -169,7 +169,7 @@
   },
   {
     "content": "Cá có thể nghe thấy âm thanh không?",
-    "like": 0,
+    "like": 1,
     "dislike": 0,
     "id": 29
   },
@@ -205,7 +205,7 @@
   },
   {
     "content": "Có thể dùng lửa để tạo ra băng không?",
-    "like": 0,
+    "like": 1,
     "dislike": 0,
     "id": 35
   },
@@ -218,7 +218,7 @@
   {
     "content": "Con người có thể sống mà không cần ăn không?",
     "like": 0,
-    "dislike": 0,
+    "dislike": 2,
     "id": 37
   },
   {
@@ -226,5 +226,11 @@
     "like": 0,
     "dislike": 0,
     "id": 38
+  },
+  {
+    "content": "Thư có điên không?",
+    "like": 0,
+    "dislike": 0,
+    "id": 39
   }
 ]
