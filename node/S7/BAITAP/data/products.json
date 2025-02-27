@@ -1,0 +1,298 @@
+[
+  {
+    "id": 1,
+    "productName": "Xbox 2023",
+    "status": true,
+    "listing": {
+      "description": "Very expensive shit !!!",
+      "price": 299,
+      "rate": 4
+    },
+    "comments": [
+      {
+        "commentId": 1,
+        "content": "Product not good enough"
+      },
+      {
+        "commentId": 2,
+        "content": "Product is very good though"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 2,
+        "tagName": "electronic"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "productName": "Playstation v5.0",
+    "status": true,
+    "listing": {
+      "description": "Very expensive and sophisticated electronic device !!!",
+      "price": 499,
+      "rate": 3
+    },
+    "comments": [
+      {
+        "commentId": 3,
+        "content": "Product not very good but still fun to play"
+      },
+      {
+        "commentId": 4,
+        "content": "Product is very very very good though"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "productName": "Nintendo switch",
+    "status": true,
+    "listing": {
+      "description": "Very affordable and sophisticated electronic game for youngsters !!!",
+      "price": 399,
+      "rate": 5
+    },
+    "comments": [
+      {
+        "commentId": 5,
+        "content": "Product not very good but still fun to play"
+      },
+      {
+        "commentId": 6,
+        "content": "Product is very very very good though"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 2,
+        "tagName": "electronic"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "productName": "Gameboy 5",
+    "status": true,
+    "listing": {
+      "description": "Very affordable handset game device youngsters !!!",
+      "price": 199,
+      "rate": 2.5
+    },
+    "comments": [
+      {
+        "commentId": 7,
+        "content": "Product bad and outdated but still fun to play"
+      },
+      {
+        "commentId": 8,
+        "content": "Product is very very very bad though"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 2,
+        "tagName": "electronic"
+      },
+      {
+        "tagId": 3,
+        "tagName": "secondhand"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "productName": "Mortal kombat 11",
+    "status": true,
+    "listing": {
+      "description": "Very violent game for adults",
+      "price": 99,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 9,
+        "content": "Fun to play"
+      },
+      {
+        "commentId": 10,
+        "content": "Very violent"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 4,
+        "tagName": "CD"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "productName": "FIFA 2023",
+    "status": true,
+    "listing": {
+      "description": "Very fun football game for adults",
+      "price": 99,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 11,
+        "content": "User interface not worth the price"
+      },
+      {
+        "commentId": 12,
+        "content": "Very boring, just the same football game every year with minimum updates"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 4,
+        "tagName": "CD"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "productName": "Guilty Gear Isuka",
+    "status": true,
+    "listing": {
+      "description": "Very fun arcade fighting game for adults",
+      "price": 99,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 13,
+        "content": "User interface is the best"
+      },
+      {
+        "commentId": 14,
+        "content": "Good game"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 4,
+        "tagName": "CD"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "productName": "POKEMON 2023",
+    "status": true,
+    "listing": {
+      "description": "Very fun arcade game for adults",
+      "price": 99,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 15,
+        "content": "The update version is better than its last year"
+      },
+      {
+        "commentId": 16,
+        "content": "Just dont like the UI of te game game"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 1,
+        "tagName": "games"
+      },
+      {
+        "tagId": 4,
+        "tagName": "CD"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "productName": "MOUSE PAD",
+    "status": true,
+    "listing": {
+      "description": "Leather mouse pad for smooth scrolling",
+      "price": 49,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 17,
+        "content": "Good one"
+      },
+      {
+        "commentId": 18,
+        "content": "Color not very attractive"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 2,
+        "tagName": "electronic"
+      },
+      {
+        "tagId": 5,
+        "tagName": "Gear"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "productName": "Vintage keyboard",
+    "status": true,
+    "listing": {
+      "description": "electronic keyboard with vintage outlook",
+      "price": 249,
+      "rate": 4.5
+    },
+    "comments": [
+      {
+        "commentId": 19,
+        "content": "Good one"
+      },
+      {
+        "commentId": 20,
+        "content": "Outlook looks good"
+      }
+    ],
+    "tags": [
+      {
+        "tagId": 2,
+        "tagName": "electronic"
+      },
+      {
+        "tagId": 5,
+        "tagName": "Gear"
+      }
+    ]
+  }
+]

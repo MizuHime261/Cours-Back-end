@@ -1,3 +1,4 @@
+// npm install -g nodemon json-server && npm install express nodemon body-parser morgan mysql2
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
