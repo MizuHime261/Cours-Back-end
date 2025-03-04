@@ -40,3 +40,9 @@ CREATE TABLE Product_Tag (
     FOREIGN KEY (productId) REFERENCES Product(id) ON DELETE CASCADE,
     FOREIGN KEY (tagId) REFERENCES Tag(tagId) ON DELETE CASCADE
 );
+
+select * from comment;
+select * from product;
+select * from tag;
+
+ALTER TABLE Product MODIFY status BOOLEAN NOT NULL DEFAULT TRUE;

@@ -1,0 +1,130 @@
+{
+  "books": [
+    {
+      "bookId": 1,
+      "title": "The Great Gatsby",
+      "authorId": 1,
+      "categoryId": 1,
+      "price": 15.99,
+      "rate": 4.8
+    },
+    {
+      "bookId": 2,
+      "title": "Atomic Habits",
+      "authorId": 2,
+      "categoryId": 2,
+      "price": 22.5,
+      "rate": 4.7
+    },
+    {
+      "bookId": 3,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "authorId": 3,
+      "categoryId": 3,
+      "price": 12.99,
+      "rate": 4.9
+    },
+    {
+      "bookId": 4,
+      "title": "Sapiens: A Brief History of Humankind",
+      "authorId": 4,
+      "categoryId": 4,
+      "price": 19.99,
+      "rate": 4.8
+    },
+    {
+      "bookId": 5,
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "authorId": 5,
+      "categoryId": 2,
+      "price": 18.0,
+      "rate": 4.6
+    },
+    {
+      "bookId": 6,
+      "title": "Harry Potter and the Chamber of Secrets",
+      "authorId": 3,
+      "categoryId": 3,
+      "price": 14.5,
+      "rate": 4.8
+    },
+    {
+      "bookId": 7,
+      "title": "The Psychology of Money",
+      "authorId": 2,
+      "categoryId": 2,
+      "price": 20.0,
+      "rate": 4.7
+    },
+    {
+      "bookId": 8,
+      "title": "Homo Deus: A Brief History of Tomorrow",
+      "authorId": 4,
+      "categoryId": 4,
+      "price": 21.99,
+      "rate": 4.9
+    }
+  ],
+  "authors": [
+    {
+      "authorId": 1,
+      "name": "F. Scott Fitzgerald"
+    },
+    {
+      "authorId": 2,
+      "name": "James Clear"
+    },
+    {
+      "authorId": 3,
+      "name": "J.K. Rowling"
+    },
+    {
+      "authorId": 4,
+      "name": "Yuval Noah Harari"
+    },
+    {
+      "authorId": 5,
+      "name": "Mark Manson"
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": 1,
+      "categoryName": "Classic Literature"
+    },
+    {
+      "categoryId": 2,
+      "categoryName": "Self-Help"
+    },
+    {
+      "categoryId": 3,
+      "categoryName": "Fantasy"
+    },
+    {
+      "categoryId": 4,
+      "categoryName": "History"
+    }
+  ],
+  "reviews": [
+    {
+      "reviewId": 1,
+      "bookId": 1,
+      "content": "A masterpiece of literature!"
+    },
+    {
+      "reviewId": 2,
+      "bookId": 1,
+      "content": "Great read, highly recommended."
+    },
+    {
+      "reviewId": 3,
+      "bookId": 2,
+      "content": "Life-changing insights!"
+    },
+    {
+      "reviewId": 4,
+      "bookId": 2,
+      "content": "Practical and effective advice."
+    }
+  ]
+}
