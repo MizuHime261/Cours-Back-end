@@ -1,0 +1,126 @@
+{
+  "hits": [
+    {
+      "jobId": 1170673,
+      "jobTitle": "02 JAVA Web Developer (Hà Nội)",
+      "jobDescription": "- Triển khai các ứng dụng trên nền tảng Java theo yêu cầu của khách hàng; - Tham gia phân tích, thiết kế, phát triển, bảo trì hệ thống; - Viết mã nguồn và thực hiện Unit test;",
+      "jobRequirement": "- Có ít nhất 1 năm kinh nghiệm Java; - Hiểu OOP, Clean Code, Design Patterns; - UML, Spring MVC, Hibernate; - Javascript frameworks; - MySQL, MongoDB, Redis; - Git",
+      "salaryMin": 500,
+      "salaryMax": 1000,
+      "skills": [
+        "Hibernate",
+        "Spring MVC",
+        "JavaScript",
+        "Struts",
+        "Spring Boots"
+      ],
+      "categories": ["IT - Software", "Backend Developers"],
+      "locations": ["Hà Nội"],
+      "company": {
+        "companyId": 298378,
+        "name": "Yumeshin Vietnam",
+        "logo": "https://images.vietnamworks.com/pictureofcompany/8c/10756982.png"
+      },
+      "benefits": [
+        { "name": "Bonus", "value": "14 tháng lương, tăng lương 2 lần/năm" },
+        { "name": "Healthcare Plan", "value": "Bảo hiểm đầy đủ theo quy định" },
+        {
+          "name": "Paid Leave",
+          "value": "Cơ hội nâng cao kiến thức, thăng tiến"
+        }
+      ]
+    },
+    {
+      "jobId": 1170146,
+      "jobTitle": "Android Developer (Fresher/junior & Senior)",
+      "jobDescription": "Trao đổi thêm khi phỏng vấn.",
+      "jobRequirement": "- Java, Android SDK, NDK, OOP, Web services; - SQL; - Có kinh nghiệm 1-2 năm; - Ưu tiên biết tiếng Nhật",
+      "salaryMin": 300,
+      "salaryMax": 0,
+      "skills": ["Java", "Android Ndk", "Android Sdk", "Web Sevice"],
+      "categories": ["IT - Software"],
+      "company": {
+        "companyId": 114113,
+        "name": "ARIS Vietnam Co., Ltd",
+        "logo": "https://images.vietnamworks.com/pictureofcompany/40/6215187.png"
+      },
+      "benefits": [
+        { "name": "Training", "value": "Đào tạo quản lý, kỹ năng mềm" },
+        {
+          "name": "Travel Opportunities",
+          "value": "Company Trip, khám sức khoẻ"
+        },
+        { "name": "Bonus", "value": "Lương thưởng theo năng lực" }
+      ],
+      "locations": ["Hồ Chí Minh"]
+    },
+    {
+      "jobId": 1162710,
+      "jobTitle": "Senior Front-End Developer",
+      "jobDescription": "Web-based products for marketing, corporate sites, forums, newsletters.",
+      "jobRequirement": "3+ years front-end; HTML5, CSS, JS; DOM, Angular, Node, React; Git Bash, SVN",
+      "salaryMin": 300,
+      "salaryMax": 0,
+      "skills": [
+        "Software Engineering",
+        "HTML5",
+        "Front-End",
+        "Web Development"
+      ],
+      "categories": ["IT - Software", "Frontend Developers"],
+      "company": {
+        "companyId": 1706,
+        "name": "Gameloft",
+        "logo": "https://images.vietnamworks.com/pictureofcompany/e0/4079410.png"
+      },
+      "benefits": [
+        { "name": "Training", "value": "Continuous learning" },
+        { "name": "Awards", "value": "Exciting challenges" },
+        { "name": "Bonus", "value": "Creative workplace" }
+      ],
+      "locations": ["Hồ Chí Minh"]
+    },
+    {
+      "jobId": 1163358,
+      "jobTitle": "Web Developer (Fullstack)",
+      "jobDescription": "Xây dựng các ứng dụng web cho ngân hàng và tài chính; bảo trì hệ thống.",
+      "jobRequirement": "3-5 năm kinh nghiệm; Java, Spring, Restful API, HTML, CSS; ưu tiên kinh nghiệm tài chính-ngân hàng",
+      "salaryMin": 500,
+      "salaryMax": 1500,
+      "skills": ["Java", "Weblogic", "Restful Api", "HTML", "Spring"],
+      "categories": ["IT - Software"],
+      "company": {
+        "companyId": 284536,
+        "name": "Shinhan DS Vietnam",
+        "logo": "https://images.vietnamworks.com/pictureofcompany/92/10668657.png"
+      },
+      "benefits": [
+        { "name": "Others", "value": "Môi trường làm việc năng động" },
+        { "name": "Training", "value": "Đào tạo nước ngoài" },
+        { "name": "Bonus", "value": "Lương thưởng hấp dẫn lên đến 300%" }
+      ],
+      "locations": ["Hồ Chí Minh"]
+    },
+    {
+      "jobId": 1162711,
+      "jobTitle": "Senior PHP Developer",
+      "jobDescription": "Phát triển sản phẩm web, hỗ trợ marketing và các dự án nội bộ.",
+      "jobRequirement": "3 năm kinh nghiệm PHP, Framework Zend, CodeIgniter; HTML, CSS, JS; hiểu rõ Rest API, Git",
+      "salaryMin": 300,
+      "salaryMax": 0,
+      "skills": ["PHP", "Back-End", "Web Development", "Scrum"],
+      "categories": ["IT - Software", "Backend Developers"],
+      "company": {
+        "companyId": 1706,
+        "name": "Gameloft",
+        "logo": "https://images.vietnamworks.com/pictureofcompany/e0/4079410.png"
+      },
+      "benefits": [
+        { "name": "Training", "value": "Continuous learning" },
+        { "name": "Awards", "value": "Exciting challenges" },
+        { "name": "Bonus", "value": "Creative workplace" }
+      ],
+      "locations": ["Hồ Chí Minh"]
+    }
+  ]
+}

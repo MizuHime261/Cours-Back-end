@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" href="/css/book.css">
+    <script defer src="/js/book.js"></script> <!-- Đảm bảo file JS tải sau khi HTML load -->
+</head>
+<body>
+    <header>
+        <h1>Chào mừng đến với BookStore</h1>
+        <nav>
+            <ul>
+                <li><a href="/html/book.html">Sách</a></li>
+                <li><a href="/html/category.html">Danh mục</a></li>
+                <li><a href="/html/review.html">Đánh giá</a></li>
+                <li><a href="/html/author.html">Tác giả</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Danh sách sách</h2>
+
+        <!-- ✅ Hộp tìm kiếm -->
+        <div>
+            <input type="text" id="search" placeholder="Tìm kiếm theo tiêu đề...">
+            <button onclick="searchBook()">Tìm kiếm</button>
+        </div>
+
+        <!-- ✅ Bộ lọc -->
+        <div>
+            <label>Giá:</label>
+            <input type="number" id="minPrice" placeholder="Min">
+            <input type="number" id="maxPrice" placeholder="Max">
+            <label>Đánh giá:</label>
+            <input type="number" id="minRate" placeholder="Min" step="0.1">
+            <input type="number" id="maxRate" placeholder="Max" step="0.1">
+            <label>Tác giả:</label>
+            <input type="text" id="authorName" placeholder="Tên tác giả">
+            <button onclick="filterBooks()">Lọc</button>
+        </div>
+
+        <!-- ✅ Chức năng sắp xếp -->
+        <div>
+            <label>Sắp xếp:</label>
+            <select id="sortField">
+                <option value="price">Giá</option>
+                <option value="rate">Đánh giá</option>
+                <option value="title">Tiêu đề</option>
+                <option value="author_name">Tác giả</option> <!-- ✅ Chỉnh lại cho đúng với API -->
+            </select>
+            <select id="sortOrder">
+                <option value="asc">Tăng dần</option>
+                <option value="desc">Giảm dần</option>
+            </select>
+            <button onclick="sortBooks()">Sắp xếp</button>
+        </div>
+
+        <!-- ✅ Thêm thẻ hiển thị lỗi nếu có -->
+        <div id="message"></div>
+
+        <!-- ✅ Khu vực hiển thị danh sách sách -->
+        <ul id="book-list"></ul>
+
+        <!-- ✅ Điều hướng trang -->
+        <div>
+            <button onclick="prevPage()">Trang trước</button>
+            <span id="page-info">Trang 1</span>
+            <button onclick="nextPage()">Trang sau</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 BookStore</p>
+    </footer>
+</body>
+</html>
