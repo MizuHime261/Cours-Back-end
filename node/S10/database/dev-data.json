@@ -1,0 +1,84 @@
+{
+  "courses": [
+    {
+      "courseId": 1001,
+      "title": "Lập trình Python cho người mới bắt đầu",
+      "description": "Học từ cơ bản đến OOP, thao tác với file và API.",
+      "duration": "30 giờ",
+      "level": "Beginner",
+      "instructor": {
+        "instructorId": 1,
+        "name": "Nguyễn Văn A",
+        "avatar": "https://example.com/avatar1.png"
+      },
+      "categories": ["Programming", "Python"],
+      "lessons": ["Biến & Kiểu dữ liệu", "Câu điều kiện", "Vòng lặp", "OOP"],
+      "price": 299000,
+      "rating": 4.7
+    },
+    {
+      "courseId": 1002,
+      "title": "Thiết kế UI/UX hiện đại với Figma",
+      "description": "Từ nguyên lý thiết kế đến thực hành các dự án thực tế trên Figma.",
+      "duration": "24 giờ",
+      "level": "Intermediate",
+      "instructor": {
+        "instructorId": 2,
+        "name": "Trần Thị B",
+        "avatar": "https://example.com/avatar2.png"
+      },
+      "categories": ["Design", "UI/UX"],
+      "lessons": ["Wireframe", "Prototype", "Design system"],
+      "price": 499000,
+      "rating": 4.6
+    },
+    {
+      "courseId": 1003,
+      "title": "Phân tích dữ liệu với Excel và Power BI",
+      "description": "Khai thác sức mạnh phân tích dữ liệu từ công cụ phổ biến.",
+      "duration": "40 giờ",
+      "level": "Beginner",
+      "instructor": {
+        "instructorId": 3,
+        "name": "Phạm Văn C",
+        "avatar": "https://example.com/avatar3.png"
+      },
+      "categories": ["Data", "Excel", "Power BI"],
+      "lessons": ["PivotTable", "Chart", "Power Query", "DAX"],
+      "price": 399000,
+      "rating": 4.8
+    },
+    {
+      "courseId": 1004,
+      "title": "Digital Marketing toàn diện 2024",
+      "description": "Học SEO, chạy quảng cáo, social media và phễu chuyển đổi.",
+      "duration": "50 giờ",
+      "level": "Advanced",
+      "instructor": {
+        "instructorId": 2,
+        "name": "Trần Thị B",
+        "avatar": "https://example.com/avatar2.png"
+      },
+      "categories": ["Marketing", "SEO", "Social Media"],
+      "lessons": ["SEO Onpage", "Facebook Ads", "Google Analytics"],
+      "price": 799000,
+      "rating": 4.5
+    },
+    {
+      "courseId": 1005,
+      "title": "Lập trình Web với HTML, CSS và JavaScript",
+      "description": "Khóa học nền tảng cho lập trình web, không yêu cầu kiến thức trước.",
+      "duration": "36 giờ",
+      "level": "Beginner",
+      "instructor": {
+        "instructorId": 1,
+        "name": "Nguyễn Văn A",
+        "avatar": "https://example.com/avatar1.png"
+      },
+      "categories": ["Programming", "Web Development"],
+      "lessons": ["HTML5", "CSS3", "DOM", "JavaScript cơ bản"],
+      "price": 350000,
+      "rating": 4.6
+    }
+  ]
+}
