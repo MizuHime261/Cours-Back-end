@@ -1,7 +1,7 @@
 const borrowModel = require('../models/borrow.model');
 
 // Lấy tất cả các bản ghi mượn sách
-exports.getAllBorrows = async (req, res) => {
+module.exports.getAllBorrows = async (req, res) => {
   try {
     const borrows = await borrowModel.getAllBorrows();
     res.status(200).json(borrows);
@@ -11,7 +11,7 @@ exports.getAllBorrows = async (req, res) => {
 };
 
 // Lấy các bản ghi mượn sách theo người dùng
-exports.getBorrowsByUser = async (req, res) => {
+module.exports.getBorrowsByUser = async (req, res) => {
   const userId = req.params.userId;
   try {
     const borrows = await borrowModel.getBorrowsByUser(userId);
@@ -22,7 +22,7 @@ exports.getBorrowsByUser = async (req, res) => {
 };
 
 // Lấy các sách chưa trả
-exports.getOverdueBorrows = async (req, res) => {
+module.exports.getOverdueBorrows = async (req, res) => {
   try {
     const borrows = await borrowModel.getOverdueBorrows();
     res.status(200).json(borrows);
@@ -32,7 +32,7 @@ exports.getOverdueBorrows = async (req, res) => {
 };
 
 // Mượn sách
-exports.borrowBook = async (req, res) => {
+module.exports.borrowBook = async (req, res) => {
   const { user_id, book_id } = req.body;
   try {
     const newBorrow = await borrowModel.borrowBook(user_id, book_id);
@@ -49,7 +49,7 @@ exports.borrowBook = async (req, res) => {
 };
 
 // Trả sách
-exports.returnBook = async (req, res) => {
+module.exports.returnBook = async (req, res) => {
   const borrowId = req.params.id;
   try {
     await borrowModel.returnBook(borrowId);
@@ -60,7 +60,7 @@ exports.returnBook = async (req, res) => {
 };
 
 // Kiểm tra tình trạng sách
-exports.getBookStatus = async (req, res) => {
+module.exports.getBookStatus = async (req, res) => {
   const bookId = req.params.bookId;
   try {
     const borrowRecord = await borrowModel.getBookStatus(bookId);
@@ -71,7 +71,7 @@ exports.getBookStatus = async (req, res) => {
 };
 
 // Lấy thông tin sách mượn theo ID sách
-exports.getBorrowsByBook = async (req, res) => {
+module.exports.getBorrowsByBook = async (req, res) => {
   const bookId = req.params.bookId;
   try {
     const borrows = await borrowModel.getBorrowsByBook(bookId);

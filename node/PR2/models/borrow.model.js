@@ -1,7 +1,7 @@
 const knex = require('../config/db');
 
 // Lấy tất cả các bản ghi mượn sách
-const getAllBorrows = async () => {
+module.exports.getAllBorrows = async () => {
   const borrows = await knex('borrow')
     .join('users', 'borrow.user_id', '=', 'users.id')
     .join('books', 'borrow.book_id', '=', 'books.id')
@@ -24,7 +24,7 @@ const getAllBorrows = async () => {
 };
 
 // Lấy các bản ghi mượn sách theo người dùng
-const getBorrowsByUser = async (userId) => {
+module.exports.getBorrowsByUser = async (userId) => {
   return await knex('borrow')
     .join('users', 'borrow.user_id', '=', 'users.id')
     .join('books', 'borrow.book_id', '=', 'books.id')
@@ -33,7 +33,7 @@ const getBorrowsByUser = async (userId) => {
 };
 
 // Lấy các sách chưa trả
-const getOverdueBorrows = async () => {
+module.exports.getOverdueBorrows = async () => {
   return await knex('borrow')
     .join('users', 'borrow.user_id', '=', 'users.id')
     .join('books', 'borrow.book_id', '=', 'books.id')
@@ -43,7 +43,7 @@ const getOverdueBorrows = async () => {
 };
 
 // Mượn sách
-const borrowBook = async (user_id, book_id) => {
+module.exports.borrowBook = async (user_id, book_id) => {
   // Kiểm tra số sách có còn lại không
   const book = await knex('books').where('id', book_id).first();
   const borrowedCount = await knex('borrow')
@@ -74,7 +74,7 @@ const borrowBook = async (user_id, book_id) => {
 };
 
 // Trả sách
-const returnBook = async (borrowId) => {
+module.exports.returnBook = async (borrowId) => {
   // Lấy thông tin sách trong bản ghi mượn
   const borrowRecord = await knex('borrow')
     .where('id', borrowId)
@@ -96,7 +96,7 @@ const returnBook = async (borrowId) => {
 };
 
 // Kiểm tra trạng thái của sách
-const getBookStatus = async (bookId) => {
+module.exports.getBookStatus = async (bookId) => {
   const book = await knex('books').where('id', bookId).first();
   const borrowedCount = await knex('borrow')
     .where('book_id', bookId)
@@ -113,19 +113,9 @@ const getBookStatus = async (bookId) => {
 };
 
 // Lấy tất cả các bản ghi mượn sách theo ID sách
-const getBorrowsByBook = async (bookId) => {
+module.exports.getBorrowsByBook = async (bookId) => {
   return await knex('borrow')
     .join('users', 'borrow.user_id', '=', 'users.id')
     .select('borrow.*', 'users.name as user_name')
     .where('borrow.book_id', bookId);
-};
-
-module.exports = {
-  getAllBorrows,
-  getBorrowsByUser,
-  getOverdueBorrows,
-  borrowBook,
-  returnBook,
-  getBookStatus,
-  getBorrowsByBook
 };
